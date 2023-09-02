@@ -1,8 +1,8 @@
 ﻿using static Casino.Domain.Utils.Enum;
 
-namespace Casino.Domain.Models.Bets
+namespace Casino.Domain.Models.Profits
 {
-    public class ColorBet
+    public class ProfitsColor
     {
         public RouletteColor Color { get; set; }
         public decimal Quantity { get; set; }

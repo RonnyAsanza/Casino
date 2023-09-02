@@ -16,7 +16,7 @@
             Succeeded = succeeded;
             Message = message;
         }
-        public Response(string message, Dictionary<string, string[]> errors)
+        public Response(string message, IEnumerable<string> errors)
         {
             Succeeded = false;
             Message = message;
@@ -24,7 +24,9 @@
         }
         public bool Succeeded { get; set; }
         public string Message { get; set; }
-        public Dictionary<string, string[]> Errors { get; set; } = new();
+        //public Dictionary<string, string[]> Errors { get; set; } = new();
+        public IEnumerable<string> Errors { get; set; }
+
         public T Data { get; set; }
     }
 }
